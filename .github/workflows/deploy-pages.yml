@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'docs/**'
+      - '**.html'
   workflow_dispatch:
 
 permissions:
@@ -23,7 +23,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          publish_dir: ./
           publish_branch: gh-pages
           force_orphan: true
           user_name: github-actions[bot]
